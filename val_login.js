@@ -5,7 +5,9 @@ function validar_login(){
 
 
     if (access_key =='' || access_key == undefined){
-        alert("Precisa Login")
+        alert("Para poder comprar, por favor, faça login.")
+        window.location.replace('./login.html')
+
     }
     else{
         cart = []

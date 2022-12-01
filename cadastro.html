@@ -27,29 +27,34 @@
 			      		</div>
 				
 			      	</div>
-							<form action="" class="signin-form">
+							<form id = "form" action="" class="signin-form">
 			      		<div class="form-group mb-3">
-			      			<label class="label" for="name">Email</label>
-			      			<input id="cad-email" type="text" class="form-control" placeholder="exemplo@outlook.com" required>
+			      			<label class="label" for="email">E-mail</label>
+			      			<input id="cad-email" type="text" class="form-control required" placeholder="exemplo@outlook.com" oninput="validaEmail()">
+							  <span class="span-control">Digite um e-mail valido</span>
 			      		</div>
 		            <div class="form-group mb-3">
-		            	<label class="label" for="password" >Nome</label>
-		              <input id="cad-nome" type="text" class="form-control" placeholder="Fulano de Tal" required>
+		            	<label class="label" for="nome" >Nome</label>
+		              <input type="text" id="cad-nome" class="form-control required" placeholder="Fulano de Tal" oninput = "validaNome()">
+					  <span class="span-control">O nome deve ter no minimo 3 caracteres</span>
 		            </div>
 					<div class="form-group mb-3">
-		            	<label class="label" for="password">CPF</label>
-		              <input id="cad-cpf" type="text" class="form-control" placeholder="Somente números" required>
+		            	<label class="label" for="cpf">CPF</label>
+		              <input id="cad-cpf" type="text" class="form-control required" placeholder="Somente números" oninput = "validaCPF()">
+					  <span class="span-control">Digite um CPF valido</span>
 		            </div>
                     <div class="form-group mb-3">
 		            	<label class="label" for="password">Data de Nascimento</label>
-		              <input id="cad-nascimento" type="date" class="form-control" placeholder="dd/mm/aaaa" required>
+		              <input id="cad-nascimento" type="date" class="form-control required" placeholder="dd/mm/aaaa" oninput="validaData()">
+					  <span class="span-control">Você precisa ser maior de 18 anos para se cadastrar</span>
 		            </div>
                     <div class="form-group mb-3">
 		            	<label class="label" for="password">Senha</label>
-		              <input id="cad-senha" type="password" class="form-control" placeholder="exemplo123" required>
+		              <input id="cad-senha" type="password" class="form-control required" placeholder="exemplo123" oninput="validaSenha()">
+					  <span class="span-control">Digite uma senha de 8 ou mais caracteres</span>
 		            </div>
 		            <div class="form-group">
-		            	<button type="button" class="form-control btn btn-primary rounded submit px-3"onclick="cadastro()">Cadastrar agora</button>
+		            	<button type="submit" class="form-control btn btn-primary rounded submit px-3">Cadastrar agora</button>
 		            </div>
 		          </form>
 		          <p class="text-center">Já possui conta? <a href="./login.html">Conecte-se!</a></p>
@@ -60,7 +65,9 @@
 		</div>
 	</section>
 
-  <script src="./cadastros.js"></script>
+  <script src="./cadastros.js">
+
+  </script>
 
 	</body>
 </html>
